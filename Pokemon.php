@@ -29,13 +29,12 @@ class Pokemon {
 {
   echo '<h2> This is the name: ' . $this->name . '</h2>';
 }
-public function showAttack1()
+public function showAttacks()
 {
- echo '<h2> This is attack one: ' . $this->attacks[0] . '</h2>';
-}
-public function showAttack2()
-{
- echo '<h2> This is attack two: ' . $this->attacks[1] . '</h2>';
+  foreach ($this->attacks as $atk) {
+    echo '<h2> This is a attack: ' . $atk . '</h2>';
+  }
+
 }
 public function showWeakness()
 {
@@ -53,6 +52,7 @@ public function showEnergyType()
   //
   //     return $this->$name . ' s energyType=  ' . $this->energyType . ' hp= ' . $this->hitpoints . 'attack 1 = ' . $this->attack1 . 'attack 2 = ' . $this->attack2 . 'the weakness = ' . $this->weakness . 'resistance = ' $this->resistance;
   //   }
+
 }
 
 

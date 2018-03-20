@@ -1,15 +1,20 @@
 <?php
+require_once 'Attack.php';
 class Charmeleon extends Pokemon {
-  public $name = 'Caramel';
-  public $energyType = 'Fire';
-  public $hitpoints = 60;
-  public $attacks = array ('Ember | 10','Flamethrower | 30');
-  public $weakness = 'Water | 2';
-  public $resistance= 'Lightning | 10';
+
 
   public function __construct()
     {
-        parent::__construct($this->name, $this->energyType, $this->hitpoints, $this->attacks,$this->weakness,$this->resistance);
+      $name = 'Caramel';
+      $energyType = 'Fire';
+      $hitpoints = 60;
+      $weakness = 'Water | 2';
+      $resistance= 'Lightning | 10';
+      $myAttacks = [
+        new Attack('Ember',10), new Attack('Flamethrower', 30)
+      ];
+
+        parent::__construct($name, $energyType, $hitpoints, $myAttacks,$weakness,$resistance);
     }
 }
 
