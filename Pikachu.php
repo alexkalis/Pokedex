@@ -1,7 +1,4 @@
 <?php
-
-require_once 'Attack.php';
-
 class Pikachu extends Pokemon {
   public function __construct()
     {
@@ -13,7 +10,7 @@ class Pikachu extends Pokemon {
         $myAttacks = [
           new Attack('Electric Ring',50), new Attack('Pika Punch', 20)
         ];
-
+      
         parent::__construct($name, $energyType, $hitpoints, $myAttacks,$weakness,$resistance);
     }
 }

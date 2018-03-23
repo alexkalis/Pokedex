@@ -1,4 +1,5 @@
 <?php
+
 class Attack {
   public $name;
   public $damage;
@@ -10,6 +11,9 @@ class Attack {
   public function __toString() {
      return json_encode($this);
    }
+
+
+
 }
 
 

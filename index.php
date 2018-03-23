@@ -1,12 +1,13 @@
 <?php
-// require 'Attack.php';
-require 'autoload.php';
+spl_autoload_register(function ($class_name) {
+    include $class_name . '.php';
+});
 
 $pikachu = new Pikachu();
 $pikachu->showName();
 $pikachu->showHitpoints();
 $pikachu->showEnergyType();
-echo($pikachu->showAttacks());
+echo $pikachu->showAttacks();
 $pikachu->showWeakness();
 $pikachu->showResistance();
 print_r('<pre>' . $pikachu . '</pre>');
@@ -14,7 +15,7 @@ $charmeleon = new Charmeleon();
 $charmeleon->showName();
 $charmeleon->showHitpoints();
 $charmeleon->showEnergyType();
-$charmeleon->showAttacks();
+ echo $charmeleon->showAttacks();
 $charmeleon->showWeakness();
 $charmeleon->showResistance();
 
