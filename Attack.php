@@ -1,4 +1,7 @@
 <?php
+spl_autoload_register(function ($class_name) {
+    include $class_name . '.php';
+});
 
 class Attack {
   public $name;
@@ -9,7 +12,7 @@ class Attack {
     $this->damage = $damage;
   }
   public function __toString() {
-     return json_encode($this);
+     return $this->name . ', ' . $this->damage;
    }
 
 
