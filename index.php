@@ -10,7 +10,7 @@ $pikachu->showEnergyType();
 echo $pikachu->showAttacks();
 $pikachu->showWeakness();
 $pikachu->showResistance();
-// $pikachu->attack($pikachu->attacks[0], $pikachu);
+// $pikachu->attack($pikachu->attacks[0], $charmeleon);
 print_r('<pre>' . $pikachu . '</pre>');
 
 

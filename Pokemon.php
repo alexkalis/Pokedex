@@ -8,6 +8,7 @@ class Pokemon {
   public $resistance;
 
 
+
   public function __construct($name,$energyType,$hitpoints,$attacks,$weakness,$resistance) {
     $this->name = $name;
     $this->energyType = $energyType;
