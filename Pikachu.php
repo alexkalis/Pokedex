@@ -5,9 +5,9 @@ class Pikachu extends Pokemon {
        $name = 'Pika';
        $energyType = 'Lightning';
        $hitpoints = 60;
-       $weakness = 'Fire | 1,5';
-       $resistance= 'fighting | 20';
-        $myAttacks = [
+       $weakness =  new Weakness('Fire' , 2);
+       $resistance= new Resistance('Fighting', 10);
+       $myAttacks = [
           new Attack('Electric Ring',50), new Attack('Pika Punch', 20)
         ];
 

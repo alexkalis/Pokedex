@@ -21,16 +21,41 @@ class Pokemon {
      return json_encode($this);
             }
 //Attack target with Attack.
-public function attack($target, $attack) {
-  $target->defend( $this->energyType,$attack);
-}
-public function defend($attack) {
-  if ($target->energyType == $attack->energyType) {
-    # code...
-
-  }
+public function attack($target,$attacknr) {
+  $target->defend($this->attacks[$attacknr], $this->energyType);
 }
 
+public function defend($attack,$attackerEnergytype) {
+echo '<br>';
+echo $attack;
+echo '<br>';
+echo $this->hitpoints;
+echo '<br>';
+echo $attackerEnergytype;
+echo '<br>';
+
+
+      if ($this->resistance == $attackerEnergytype) {
+          $this->hitpoints - ($damage - 10);
+      } elseif($this->weakness ==$attackerEnergytype) {
+        $this->hitpoints - ($damage *2);
+
+        echo $attack->damage;
+
+        echo $hitpoints;
+      }else {
+        $this->hitpoints - $attack-damage;
+      }
+
+
+// public function defend($target,$attack,$energyType) {
+//   if ($this->energyType == $energyType) {
+//     $this->attack * 2;
+//   }
+//   elseif ($this->energyType == $weakness) {
+//   $this->attack *2;
+//   }
+// }
 
             // public function attack($target, $attack) {
             //
@@ -49,7 +74,7 @@ public function defend($attack) {
             //                 }
             //             }
             //         }
-            //     }
+          }
     public function showHitpoints()
  {
      echo '<h2> These are the hitpoints: ' . $this->hitpoints . '</h2>';
