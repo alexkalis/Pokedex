@@ -1,14 +1,14 @@
 <?php
 class Resistance {
 public $resistance;
-public $minus;
+// public $minus;
 
-  public function __construct($resistance, $minus) {
+  public function __construct($resistance) { //, $minus
     $this->resistance = $resistance;
-    $this->minus = $minus;
+    // $this->minus = $minus;
   }
   public function __toString() {
-     return $this->resistance . ', ' . $this->minus;
+     return $this->resistance; //. ', ' . $this->minus;
    }
 }
  ?>

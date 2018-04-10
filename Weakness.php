@@ -1,14 +1,14 @@
 <?php
 class Weakness {
 public $energyType;
-public $multiplier;
+//public $multiplier;
 
-public function __construct($energyType, $multiplier) {
+public function __construct($energyType) { //, $multiplier
   $this->energytype = $energyType;
-  $this->multiplier = $multiplier;
+  //$this->multiplier = $multiplier;
 }
 public function __toString() {
-   return $this->energytype . ', ' . $this->multiplier;
+   return $this->energytype; //. ', ' . $this->multiplier;
  }
 }
  ?>

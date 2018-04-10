@@ -26,6 +26,7 @@ public function attack($target,$attacknr) {
 }
 
 public function defend($attack,$attackerEnergytype) {
+echo 'This is the target:' .$this->name ;
 echo '<br>';
 echo $attack;
 echo '<br>';
@@ -36,16 +37,26 @@ echo '<br>';
 
 
       if ($this->resistance == $attackerEnergytype) {
-          $this->hitpoints - ($damage - 10);
-      } elseif($this->weakness ==$attackerEnergytype) {
-        $this->hitpoints - ($damage *2);
-
-        echo $attack->damage;
-
-        echo $hitpoints;
-      }else {
-        $this->hitpoints - $attack-damage;
+      $newDamage =  $this->hitpoints - $attack->damage - 10;
+      $this->hitpoints = $this->hitpoints - $newDamage;
       }
+      elseif($this->weakness == $attackerEnergytype) {
+      $newDamage =  $this->hitpoints - $attack->damage *2;
+      $this->hitpoints = $this->hitpoints - $newDamage;
+
+      } else {
+      $newDamage =  $this->hitpoints - $attack->damage;
+      $this->hitpoints = $this->hitpoints - $newDamage;;
+      }
+      echo "<br>";
+      echo 'This is the damage that is done: ' . $newDamage;
+      echo "<br>";
+      echo 'This is the health now: ' . $this->hitpoints;
+      echo "<br><br>";
+
+      //else {
+      //   $this->hitpoints - $attack-damage;
+      // }
 
 
 // public function defend($target,$attack,$energyType) {
