@@ -8,8 +8,8 @@ class Charmeleon extends Pokemon {
       $name = 'Caramel';
       $energyType = 'Fire';
       $hitpoints = 60;
-      $weakness = 'Water | 2';
-      $resistance= 'Lightning | 10';
+      $weakness = new Weakness('Water',2);
+      $resistance= new Resistance('Lightning', 10);
       $myAttacks = [
         new Attack('Ember',10), new Attack('Flamethrower', 30)
       ];
