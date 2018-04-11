@@ -2,7 +2,7 @@
 spl_autoload_register(function ($class_name) {
     include $class_name . '.php';
 });
-
+//make a new pokemon
 $pikachu = new Pikachu();
 $pikachu->showName();
 $pikachu->showHitpoints();
@@ -13,7 +13,7 @@ $pikachu->showHitpoints();
 
 echo "<br>";
 
-
+//make a new pokemon
 $charmeleon = new Charmeleon();
 $charmeleon->showName();
 $charmeleon->showHitpoints();
@@ -21,9 +21,10 @@ $charmeleon->showHitpoints();
 //  echo $charmeleon->showAttacks();
 // $charmeleon->showWeakness();
 // $charmeleon->showResistance();
+
+//attack
 $pikachu->attack($charmeleon,0);
 $charmeleon->attack($pikachu,0);
-
 
 echo "<br>";
 

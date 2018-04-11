@@ -1,7 +1,7 @@
 <?php
+//make a new pokemon
 require_once 'Attack.php';
 class Charmeleon extends Pokemon {
-
 
   public function __construct()
     {
@@ -12,12 +12,8 @@ class Charmeleon extends Pokemon {
       $resistance= new Resistance('Lightning', 10);
       $myAttacks = [
         new Attack('Ember',10), new Attack('Flamethrower', 30)
-      ];
-
-        parent::__construct($name, $energyType, $hitpoints, $myAttacks,$weakness,$resistance);
-    }
+];
+    parent::__construct($name, $energyType, $hitpoints, $myAttacks,$weakness,$resistance);
+  }
 }
-
-
-
  ?>
